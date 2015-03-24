@@ -1,5 +1,6 @@
 require 'faraday'
 require 'json'
+require_relative 'biz_entity'
 
 class DataFetcher
 
@@ -18,6 +19,13 @@ class DataFetcher
     # req.headers['Content-Type'] =
     end
     @parsed = JSON.parse(response.body)
+    make_biz_entities(@parsed)
+  end
+
+  def make_biz_entities(entities)
+    entities.map do |entity|
+      BizEntity.new(entity)
+    end
   end
 
 end
