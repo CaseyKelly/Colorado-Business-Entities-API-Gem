@@ -14,4 +14,5 @@ class BizEntity
   def mailing_address
     "#{@location['address']}, #{@location['city']}, #{@location['state']}, #{@location['zip']}"
   end
+
 end
