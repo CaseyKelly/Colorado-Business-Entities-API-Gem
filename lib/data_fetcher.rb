@@ -4,7 +4,9 @@ require 'rspec'
 require_relative 'biz_entity'
 require_relative 'core_ext/nil'
 
+
 class DataFetcher
+  include QueryMethod
 
   def initialize
     @conn = Faraday.new(:url => 'https://data.colorado.gov') do |faraday|
