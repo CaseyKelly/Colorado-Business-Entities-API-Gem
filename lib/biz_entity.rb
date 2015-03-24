@@ -6,7 +6,9 @@ class BizEntity
 
   def initialize(entity_hash)
     unless entity_hash['location'].nil?
-      @location = entity_hash['location']['human_address']
+      @location = JSON.parse(entity_hash['location']['human_address'])
+      #This parses the location out of JSON, I'm not sure why it the overall parser in data_fetcher.rb is not working
+
     end
   end
 end
