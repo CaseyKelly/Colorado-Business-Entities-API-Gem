@@ -3,7 +3,7 @@ require 'json'
 require 'rspec'
 require_relative 'biz_entity'
 require_relative 'core_ext/nil'
-
+require_relative 'query_method'
 
 class DataFetcher
   include QueryMethod
