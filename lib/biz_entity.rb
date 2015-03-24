@@ -1,9 +1,12 @@
 require_relative 'data_fetcher'
+
 class BizEntity
 
-  attr_reader :name
+  attr_reader :location
 
   def initialize(entity_hash)
-    @name = entity_hash[:name]
+    unless entity_hash['location'].nil?
+      @location = entity_hash['location']['human_address']
+    end
   end
 end

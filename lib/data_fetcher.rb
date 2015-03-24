@@ -1,6 +1,7 @@
 require 'faraday'
 require 'json'
 require_relative 'biz_entity'
+require_relative 'core_ext/nil'
 
 class DataFetcher
 
