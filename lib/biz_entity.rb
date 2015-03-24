@@ -11,12 +11,18 @@ class BizEntity
 
   def initialize(entity_hash)
       @entity_name = entity_hash['entityname']
-      @human_address = JSON.parse(entity_hash['location']['human_address'])
+
+      unless entity_hash['location']['human_address'].nil?
+        @human_address = JSON.parse(entity_hash['location']['human_address'])
+      else
+        @human_address = nil
+      end
+
       @longitude = entity_hash['location']['longitude']
       @latitude = entity_hash['location']['latitude']
       @entity_status = entity_hash['entitystatus']
       @entity_form_date = entity_hash['entityformdate'] #make this a date class
-      @principal_address = entity_hash['principaladdress']
+      @principal_address = entity_hash['principaladdress1']
       @principal_city = entity_hash['principalcity']
       @principal_state = entity_hash['principalstate']
       @principal_zipcode = entity_hash['principalzipcode']
