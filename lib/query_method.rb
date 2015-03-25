@@ -180,7 +180,7 @@ module QueryMethod
   #radius is measured in miles
   def search_for_entities_(longitude, latitude, radius)
     response = @conn.get do |req|
-      req.url "/resource/colorado-business-entities.json?$where=within_circle(location, #{longitude}, #{latitude}, #{radius})"
+      req.url "/resource/colorado-business-entities.json?$where=within_circle(location, #{longitude}, #{latitude}, #{radius*1609})"
     end
     parsed = JSON.parse(response.body)
     make_biz_entities(parsed)
