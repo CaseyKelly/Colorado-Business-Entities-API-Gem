@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'Colorado Business Entities API'
+  s.name        = 'colo_biz'
   s.version     = '0.0.1' #semver.org
   s.date        = '2015-04-25'
   s.summary     = "Colorado Business Entities Gem"
@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files -z`.split("\x0")
   s.homepage    = 'https://github.com/CaseyKelly/Colorado-Business-Entities-API-Gem' # need to hoook up to rubygem API http://rubygems.org/gems/
   s.license     = 'MIT'
-  s.add_runtime_dependency 'faraday', "1.0.0"
+  s.add_runtime_dependency 'faraday'
+  s.add_runtime_dependency 'json'
   s.add_development_dependency "bundler", "~> 1.7"
   s.add_development_dependency "rake", "~> 10.0"
 end
