@@ -1,6 +1,6 @@
 # require_relative "data_fetcher"
 
-module ColoradoBusinessEntitiesAPI
+module ColoBiz
   module QueryMethod
 
   #The query does not search 'fuzzy' and needs the entire entity name
