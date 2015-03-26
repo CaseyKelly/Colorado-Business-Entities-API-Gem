@@ -3,11 +3,11 @@
 # require 'rspec'
 # require_relative 'biz_entity'
 # require_relative 'core_ext/nil'
-#require_relative 'query_method'
+# require_relative 'query_method'
 
 module ColoBiz
   class DataFetcher
-    include QueryMethod
+    include ColoBiz::QueryMethod
 
     def initialize
       @conn = Faraday.new(:url => 'https://data.colorado.gov') do |faraday|
