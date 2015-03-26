@@ -1,6 +1,7 @@
-require_relative "data_fetcher"
+# require_relative "data_fetcher"
 
-module QueryMethod
+module ColoradoBusinessEntitiesAPI
+  module QueryMethod
 
   #The query does not search 'fuzzy' and needs the entire entity name
   def search_by_entity_name(entity_name)
@@ -185,5 +186,5 @@ module QueryMethod
     parsed = JSON.parse(response.body)
     make_biz_entities(parsed)
   end
-
+  end
 end
