@@ -8,7 +8,7 @@
 module ColoBiz
   class DataFetcher
     include ColoBiz::QueryMethod
-
+    
     def initialize
       @conn = Faraday.new(:url => 'https://data.colorado.gov') do |faraday|
         faraday.request  :url_encoded             # form-encode POST params
