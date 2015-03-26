@@ -1,4 +1,7 @@
 # The Colorado Business Entities API Ruby Gem
+
+[![Build Status](https://travis-ci.org/CaseyKelly/Colorado-Business-Entities-API-Gem.svg)](https://travis-ci.org/CaseyKelly/Colorado-Business-Entities-API-Gem)
+
 A Ruby interface to the Colorado Business Entities API.
 
 ## Installation
