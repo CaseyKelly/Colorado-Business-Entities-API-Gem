@@ -5,7 +5,7 @@
 A Ruby interface to the Colorado Business Entities API.
 
 ## Installation
-    gem install ?????
+    gem install colo_biz
 
 ## Documentation
 [http://rdoc.info/gems/?????][documentation]
