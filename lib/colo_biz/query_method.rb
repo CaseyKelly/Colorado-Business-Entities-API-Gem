@@ -3,10 +3,20 @@
 module ColoBiz
   module QueryMethod
 
-  #The query does not search 'fuzzy' and needs the entire entity name
+
+
+  def custom_query(query)
+    response = @conn.get do |req|
+      req.url "/resource/colorado-business-entities.json?#{query}"
+    end
+    parsed = JSON.parse(response.body)
+    make_biz_entities(parsed)
+  end
+
+  #This query searches all names that contain the string entered. e.g. the argument 'mill' will return all the entities with mill in their name.
   def search_by_entity_name(entity_name)
     response = @conn.get do |req|
-      req.url "/resource/colorado-business-entities.json?entityname=#{entity_name}"
+      req.url "/resource/colorado-business-entities.json?$select=entityname&$q=#{entity_name}"
     end
     parsed = JSON.parse(response.body)
     make_biz_entities(parsed)
