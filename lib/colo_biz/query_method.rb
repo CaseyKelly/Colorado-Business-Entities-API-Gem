@@ -3,8 +3,6 @@
 module ColoBiz
   module QueryMethod
 
-
-
   def custom_query(query)
     response = @conn.get do |req|
       req.url "/resource/colorado-business-entities.json?#{query}"
