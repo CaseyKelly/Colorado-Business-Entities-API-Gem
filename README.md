@@ -1,6 +1,7 @@
 # The Colorado Business Entities API Ruby Gem
 
 [![Build Status](https://travis-ci.org/CaseyKelly/Colorado-Business-Entities-API-Gem.svg)](https://travis-ci.org/CaseyKelly/Colorado-Business-Entities-API-Gem)
+[![Gem Version](https://badge.fury.io/rb/colo_biz.svg)](http://badge.fury.io/rb/colo_biz)
 
 A Ruby interface to the Colorado Business Entities API. Documentation for the API can be found at https://data.colorado.gov/developers/docs/colorado-business-entities.
 
