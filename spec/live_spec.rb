@@ -22,7 +22,10 @@ require 'spec_helper'
         gold_hill = ColoBiz::DataFetcher.new.search_by_entity_name("GOLD HILL MESA JOINT VENTURE, LLC")
         expect(gold_hill.first.entity_name).to eq "GOLD HILL MESA JOINT VENTURE, LLC"
       end
-
+      it 'returns a hash of entity information on successfull request' do
+        gold_hill = ColoBiz::DataFetcher.new.search_by_entity_name("GOLD HILL MESA JOINT VENTURE, LLC")
+        expect(gold_hill.first.entity_name).to eq "GOLD HILL MESA JOINT VENTURE, LLC"
+      end
     end
 
   end
