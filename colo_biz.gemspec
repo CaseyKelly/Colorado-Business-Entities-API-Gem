@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'colo_biz'
-  s.version     = '0.0.2' #semver.org
-  s.date        = '2015-04-25'
+  s.version     = '0.1.0' #semver.org
+  s.date        = '2015-04-10'
   s.summary     = "Colorado Business Entities Gem"
   s.description = "A gem that turns the CO Business Entity API into ruby methods."
   s.authors     = ["Finnegan Hewitt", "Casey Kelly"]
