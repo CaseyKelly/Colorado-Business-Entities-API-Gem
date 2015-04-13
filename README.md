@@ -11,7 +11,7 @@ A Ruby interface to the Colorado Business Entities API. Documentation for the AP
 ## Configuration
   Any queries made with the ColoBiz::DataFetcher module will return an array of businesses. For each business, all the business' attributes are returned in a JSON hash. The attributes of each object can be called by their [field name](https://data.colorado.gov/developers/docs/colorado-business-entities) in snake case.
 
-  For example, the field name principalcity can be called on any business object as:
+  For example, the field name principal_city can be called on any business object as:
   ```ruby
    @bizentity.principal_city
   ```
@@ -30,13 +30,13 @@ A Ruby interface to the Colorado Business Entities API. Documentation for the AP
 
   You can also filter the data with [fields](https://data.colorado.gov/developers/docs/colorado-business-entities). An example of this is to modify the above search to only return LLC's by adding "&entitytype=DLLC" to the end of the argument we're passing the query method:
   ```ruby
-  ColoBiz::DataFetcher.new.search_by_principle_city("evergreen&$limit=50000&entitytype=FLLC")
+  ColoBiz::DataFetcher.new.search_by_principal_city("evergreen&$limit=50000&entitytype=FLLC")
   ```
   Notice that you must use either DLLC for "Domestic Limited Liability Company" or FLLC for "Foreign Limited Liability Company".
 
   If you feel comfortable with the clauses and fields described above you may be more comfortable stringing them together for your own query to use in the .custom_query(query) method. We did not write a pagination method to return more than 50,000 results because it would be stored in memory.
 
-  The entire dataset is about 1.3 million entities which we feel would be unwieldy in active memory as a single array of objects. If you are comfortable using [pagination](http://dev.socrata.com/docs/paging.html), you want more than 500,000 results and your writing to a database, then you can iterate over our custom query method and write to a database.
+  The entire dataset is about 1.3 million entities which we feel would be unwieldy in active memory as a single array of objects. If you are comfortable using [pagination](http://dev.socrata.com/docs/paging.html), you want more than 500,000 results and you're writing to a database, then you can iterate over our custom query method and write to a database.
 
 ## Authors
 Finnegan Hewitt
